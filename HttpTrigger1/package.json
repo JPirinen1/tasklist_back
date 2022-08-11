@@ -1,13 +1,11 @@
 {
-  "name": "tasklist_back",
+  "name": "httptrigger1",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {
-    "@azure/cosmos": "^3.16.4",
-    "dotenv": "^16.0.1"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "deletedocument",
+      "type": "cosmosDB",
+      "direction": "in",
+      "databaseName": "tasklist_Db",
+      "collectionName": "tasklistcontainer",
+      "connectionStringSetting": "tasklistcosmos_DOCUMENTDB"
+    }
+  ]
+}

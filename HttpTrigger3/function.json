@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "documents",
+      "type": "cosmosDB",
+      "direction": "in",
+      "databaseName": "tasklist_Db",
+      "collectionName": "tasklistcontainer",
+      "sqlQuery": "SELECT * from c",
+      "connectionStringSetting": "tasklistcosmos_DOCUMENTDB"
+    }
+    
+  ]
+}
