@@ -14,15 +14,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-      "type": "cosmosDB",
-      "direction": "out",
-      "name": "outputDocument",
-      "databaseName": "tasklist_Db",
-      "collectionName": "tasklistcontainer",
-      "createIfNotExists": false,
-      "connectionStringSetting": "tasklistcosmos_DOCUMENTDB"
     }
   ]
 }

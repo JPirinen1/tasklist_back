@@ -13,14 +13,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-      "name": "deletedocument",
-      "type": "cosmosDB",
-      "direction": "in",
-      "databaseName": "tasklist_Db",
-      "collectionName": "tasklistcontainer",
-      "connectionStringSetting": "tasklistcosmos_DOCUMENTDB"
     }
   ]
 }
