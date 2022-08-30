@@ -49,6 +49,17 @@ module.exports = async function (context, req) {
         // If on the contrary you need to change the container based on the Trigger, then create the instance inside the Function
         const container = cosmosclient.database("tasklist_Db").container("tasklistcontainer");
         await container.item(req.body.id,req.body.id).replace(newTask);
+
+        var timeStamp = new Date().toISOString();
+
+        context.bindings.outputEvent = {
+            id: 'message-id',
+            subject: 'subject-name',
+            dataVersion: '1.0',
+            eventType: 'event-type',
+            data: "event-data",
+            eventTime: timeStamp
+        };
     }
     
     context.res = {

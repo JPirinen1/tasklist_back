@@ -26,6 +26,17 @@ module.exports = async function (context, req) {
     //const item = await container.item(req.body.id, req.body.id).read();
     await container.item(req.body.id, req.body.id).delete();
 
+    var timeStamp = new Date().toISOString();
+
+    context.bindings.outputEvent = {
+        id: 'message-id',
+        subject: 'subject-name',
+        dataVersion: '1.0',
+        eventType: 'event-type',
+        data: "event-data",
+        eventTime: timeStamp
+    };
+
     const responseMessage = "Hello, This HTTP triggered function executed successfully";
 
     context.res = {

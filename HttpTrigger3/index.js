@@ -31,11 +31,16 @@ module.exports = async function (context, req) {
     for (const document of resources) {
       ret.push({id: document.id, text : document.text, checked: document.checked, modify : document.modify})
     }
-    // var documents = context.bindings.documents;
-    // for (var i = 0; i < documents.length; i++) {
-    //   var document = documents[i];
-    //   ret.push({id: document.id, text : document.text, checked: document.checked, modify : document.modify})
-    // }
+    var timeStamp = new Date().toISOString();
+
+    context.bindings.outputEvent = {
+        id: 'message-id',
+        subject: 'subject-name',
+        dataVersion: '1.0',
+        eventType: 'event-type',
+        data: "event-data",
+        eventTime: timeStamp
+    };
 
     const responseMessage = "Hello,This HTTP triggered function executed successfully. This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
 

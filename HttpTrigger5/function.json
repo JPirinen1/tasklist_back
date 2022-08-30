@@ -23,6 +23,13 @@
       "collectionName": "tasklistcontainer",
       "createIfNotExists": false,
       "connectionStringSetting": "tasklistcosmos_DOCUMENTDB"
-    }
+    },
+    {
+      "type": "eventGrid",
+      "name": "outputEvent",
+      "topicEndpointUri": "MyEventGridTopicUriSetting",
+      "topicKeySetting": "MyEventGridTopicKeySetting",
+      "direction": "out"
+  }
   ]
 }
