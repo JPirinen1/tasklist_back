@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "delete-queu",
+      "connection": "DefaultEndpointsProtocol=https;AccountName=taskliststorage111;AccountKey=QpI0YWTU7T5BN55sBq/+iCciLlAsQXMDsqE7s2SAUpCU5awMh8PKtW1SS7IjOkqOInzCvequDbrB+AStOKH/EQ==;EndpointSuffix=core.windows.net"
+    }
+  ]
+}
