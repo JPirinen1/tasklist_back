@@ -20,6 +20,13 @@
       "topicEndpointUri": "MyEventGridTopicUriSetting",
       "topicKeySetting": "MyEventGridTopicKeySetting",
       "direction": "out"
+  },
+  {
+    "type": "queue",
+    "direction": "out",
+    "name": "myQueueItem",
+    "queueName": "delete-queu",
+    "connection": "DeleteQueuKey"
   }
   ]
 }

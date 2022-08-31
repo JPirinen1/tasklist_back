@@ -26,7 +26,9 @@ module.exports = async function (context, myQueueItem) {
 
 
     //const item = await container.item(req.body.id, req.body.id).read();
-    await container.item(req.body.id, req.body.id).delete();
+    //context.bindings.myQueueItem.body.id
+    var testi = context.bindings.myQueueItem;
+    await container.item(context.bindings.myQueueItem, context.bindings.myQueueItem).delete();
 
     var timeStamp = new Date().toISOString();
 
